@@ -28,9 +28,11 @@ function loginCall(){
              if(respObj.status==='valid'){
                 localStorage.setItem('Emp_Details', JSON.stringify(respObj.data[0]));
                 console.log('Valid', JSON.parse(localStorage.getItem('Emp_Details')));
+                window.alert('Authentication Successful. :)');
                 window.open('Home.html');
             }
             else {
+                window.alert('Username or Password is incorrect. :(');
                 console.log('Invalid', this.responseText);
             }
         }

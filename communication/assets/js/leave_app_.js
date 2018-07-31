@@ -1,19 +1,42 @@
+var taken = 0;
+
 function getBasicInfo() {
     jsonEmpDetails = JSON.parse(localStorage.getItem('Emp_Details'));
     document.getElementById("empid").innerHTML = jsonEmpDetails.emp_id;
     document.getElementById("empname").innerHTML = jsonEmpDetails.emp_name;
-    /*document.getElementById("totleave").innerHTML = jsonEmpDetails.emp_name;
-    document.getElementById("takenleave").innerHTML = jsonEmpDetails.emp_name;
-    document.getElementById("balanceleave").innerHTML = jsonEmpDetails.emp_name;
-    */
+    
+    //To get current leaves status
+   // var URL = 'http://10.1.3.186:8083/getLeavesTaken/' + jsonEmpDetails.emp_id.toString();
+    var URL = 'http://10.1.3.186:8083/getLeavesTaken/' + '1376003';
+
+    var baseURL= URL;
+    console.log(baseURL);
    
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET",baseURL, true);
+    xhttp.setRequestHeader('Content-Type', 'application/json');
+    xhttp.send();
+            
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var leaveStatus = JSON.parse(this.responseText);
+            console.log('leave status ==>', leaveStatus);
+            
+            for(i=0; i<leaveStatus.length; i++) {
+                taken += leaveStatus[i].leaves_taken;
+                console.log('chk', taken);
+            }
+            document.getElementById("totleave").innerHTML = 48;
+            document.getElementById("takenleave").innerHTML = taken;
+            document.getElementById("balanceleave").innerHTML = 48 - taken;
+         }
+    };
 }
 
 
 
 function leaveAppCall(){
-
-    
+   
     var leave_type_form = document.getElementById('leavetype').value;
     var leave_from_form = document.getElementById('leavefrom').value;
     var leave_to_form = document.getElementById('leaveuntil').value;
@@ -25,31 +48,20 @@ function leaveAppCall(){
     var today = yyyy+'-'+mm+'-'+dd;
     var date_applied_form = today;
     var leave_reason_form = document.getElementById('leavereason').value;
-    /*
-    var leave_type_form = "paid";
-    var leave_from_form = "2018-01-01";
-    var leave_to_form = "2018-01-09";
-    var contact_no_form = "8793675567";
-    var date_applied_form = "2018-01-01";
-    var leave_reason_form = "I am tired.";
-    */
-    jsonEmpDetails = JSON.parse(localStorage.getItem('Emp_Details'));
     
+    jsonEmpDetails = JSON.parse(localStorage.getItem('Emp_Details'));
+    console.log(taken);
     leaveAppObj={
         emp_id:jsonEmpDetails.emp_id, 
-        leave_id:"90",
+        leave_id:"88",
         leave_type:leave_type_form, 
         leave_from:leave_from_form, 
         leave_to:leave_to_form, 
         contact_no:contact_no_form,
         date_applied:date_applied_form,
-        total_leaves:"0",
-        leaves_accumulated:"0",
-        leaves_consumed:"0",
-        /*total_leaves:localStorage.getItem('Leave_Details').total_leaves,
-        leaves_accumulated:localStorage.getItem('Leave_Details').leaves_accumulated,
-        leaves_consumed:localStorage.getItem('Leave_Details').leaves_consumed,
-        */
+        total_leaves:"48",
+        leaves_accumulated:(48 - taken),
+        leaves_consumed:taken,
         leave_reason:leave_reason_form, 
         substitute_person:"00",
         verified_by:"00", 
