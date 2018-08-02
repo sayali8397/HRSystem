@@ -7,20 +7,34 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
+    <title>DB-HR Approve GoalPerformance</title>
     <script>
         function Start() {
             getName();
             getData();
         }
-        function getName(){
-            document.body.style.zoom="130%";
-            jsonEmpDetails = JSON.parse(localStorage.getItem('Emp_Details'));
-            document.getElementById("empname").innerHTML = jsonEmpDetails.emp_name;
-        }
-        function getData() {
+            function getName(){
+                document.body.style.zoom="130%";
+                jsonEmpDetails = JSON.parse(localStorage.getItem('Emp_Details'));
+                document.getElementById("empnameside").innerHTML = jsonEmpDetails.emp_name;
+            }
+            function getData() {
+            var curr = parseInt(localStorage.getItem('Curr_Goal'));
             jsonGoalDetails = JSON.parse(localStorage.getItem('All_Goals_Details'));
-            console.log(jsonGoalDetails[parseInt(localStorage.getItem('Curr_Goal'))]);
-            document.getElementById("goaldata").innerHTML = JSON.stringify(jsonGoalDetails[parseInt(localStorage.getItem('Curr_Goal'))]);
+            document.getElementById("empid").innerHTML = jsonGoalDetails[curr].emp_id;
+            document.getElementById("kra1").innerHTML= jsonGoalDetails[curr].kra1;
+            document.getElementById("kra1_weightage").innerHTML= jsonGoalDetails[curr].kra1_weightage;
+            document.getElementById("kra2").innerHTML= jsonGoalDetails[curr].kra2;
+            document.getElementById("kra2_weightage").innerHTML= jsonGoalDetails[curr].kra2_weightage;
+            document.getElementById("kra3").innerHTML= jsonGoalDetails[curr].kra3;
+            document.getElementById("kra3_weightage").innerHTML= jsonGoalDetails[curr].kra3_weightage;
+            document.getElementById("kra4").innerHTML = jsonGoalDetails[curr].kra4;
+            document.getElementById("kra4_weightage").innerHTML= jsonGoalDetails[curr].kra4_weightage;
+            document.getElementById("kra5").innerHTML= jsonGoalDetails[curr].kra5;
+            document.getElementById("kra5_weightage").innerHTML= jsonGoalDetails[curr].kra5_weightage;
+            document.getElementById("kra6").innerHTML= jsonGoalDetails[curr].kra6;
+            document.getElementById("kra6_weightage").innerHTML= jsonGoalDetails[curr].kra6_weightage;
+            document.getElementById("empname").innerHTML = "Parto Bamford";
             
         }    
         function approve() {
@@ -31,10 +45,8 @@
         function reject() {
             window.alert("Goal Sheet Rejected.");
             window.open("approveGoalsheet.html", "_self");
-        }
+        }        
     </script>
-    <title>Home-HR Portal</title>
-
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
@@ -63,7 +75,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a class="logo"><b>DB-HR Portal</b></a>
+            <a class="logo"><b>DB-HR portal</b></a>
             <!--logo end-->
             
             <div class="top-menu">
@@ -81,44 +93,47 @@
       <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-              
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/db_emp.png " class="img-circle" width="60"></a></p>
-              	  <h5 class="centered" id="empname"></h5>
-              	  	
-                  
-
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
-                          <span>Leave Application</span>
-                      </a>
-                      <ul class="sub">
-                            <li><a  href="leaveDashboard.html">My Leave Dashboard</a></li>
-                          <li><a  href="leave_form.html">Apply Leave</a></li>
-                          <li><a  href="approveLeave.html">Approve Leave</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
+              <div id="sidebar"  class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                
+                  <p class="centered"><a href="profile.html"><img src="assets/img/db_emp.png" class="img-circle" width="60"></a></p>
+                  <h5 class="centered" id="empnameside">Marcel Newman</h5>
+                      
+                 
+                <li class="sub-menu">
                     <a href="javascript:;" >
                         <i class="fa fa-desktop"></i>
-                        <span>Goal Performance</span>
+                        <span>Leave Application</span>
                     </a>
                     <ul class="sub">
-                        <li><a  href="goalPerformance.html">Fill Goal Sheet</a></li>
-                        <li><a  href="approveGoalsheet.html">Approve Goal Sheet</a></li>
+                        <li><a  href="leaveDashboard.html">My Leave Dashboard</a></li>
+                        <li><a  href="leave_form.html">Apply Leave</a></li>
+                        <li><a  href="approveLeave.html">Approve Leave</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
-                    <a href="index.html">
-                        <i class="fa fa-desktop"></i>
-                        <span>Learning & Development</span>
-                    </a>
-                   
-                    <ul class="sub">
+                  <a href="javascript:;" >
+                      <i class="fa fa-desktop"></i>
+                      <span>Goal Performance</span>
+                  </a>
+                  <ul class="sub">
+                      <li><a  href="goalPerformance.html">Fill Goal Sheet</a></li>
+                      <li><a  href="approveGoalsheeet.html">Approve Goal Sheet</a></li>
+                  </ul>
+              </li>
+              <li class="sub-menu">
+                <a href="index.html">
+                      <i class="fa fa-desktop"></i>
+                      <span>Learning & Development</span>
+                  </a>
+                  <ul class="sub">
                         <li><a  href="lDDashboard.html">My L & D</a></li>
-                    </ul>                </li>
-              </ul>
+                        <li><a  href="seeLD.html">See Employee L & D </a></li>
+                    </ul> 
+              </li>
+            </ul>
+            
               <!-- sidebar menu end-->
           </div>
       </aside>
@@ -130,21 +145,58 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3></h3>
-          	<div class="row mt">
-          		<div class="col-lg-12">
-                <p id="goaldata">
+          	<h3><i class="fa fa-angle-right"></i> Approve Goal Sheets</h3>
+          	<div style="height:30px;background-color:rgb(118, 126, 146);color:white;font-size:20px"><h>Applicant Information</h></div>
+              <div>
+                  
+                  <table style="width:100%;text-align:left">
+                      <tr class="tab"><td>Employee ID  :</td>
+                        <td id="empid"></td>
+                        <td class="tab"><td>Employee Name :</td>
+                            <td id="empname"></td>
+                  </table>
+              </div>
 
-                </p> 
-                </div>
-          	</div>
-			
-		</section><! --/wrapper -->
+              <div style="height:30px;background-color:rgb(118, 126, 146);color:white;font-size:20px"><h>Applicant Information</h></div>
+              <div>
+                  
+                  <table style="width:100%;text-align:left">
+                      <tr class="tab"><td>KRA1  :<span id="kra1"></span></td>
+                        <td>KRA1 Weightage  :<span id="kra1_weightage"></span></td>
+                        <td >KRA2  : <span id="kra2"></span></td>
+                        <td >KRA2 Weightage  : <span id="kra2_weightage"></span></td>
+                        <tr class="tab">
+                        <td>KRA3 :<span id="kra3"></span></td>
+                        <td>KRA3 Weightage:<span id="kra3_weightage"></span></td>
+                            <td >KRA4:<span id="kra4"></span></td>
+                            <td >KRA4 Weightage:<span id="kra4_weightage"></span></td></tr>
+                            <tr class="tab">
+                            <td>KRA5 :<span id="kra5"></span></td>
+                            <td>KRA5 Weightage :<span id="kra5_weightage"></span></td>
+                            <td >KRA6:<span id="kra6"></span></td>
+                            <td >KRA6 Weightage:<span id="kra6_weightage"></span></td></tr>
+                            
+                  </table>
+              </div>
+              <div>
+                <!--  <h>Final Rating:<span id="final_rating"></span></h> -->
+              </div>
+              <div style="margin-top:30px">
+                    <table>
+                            <tr>
+                                    <td><button id="loginbtn" class="btn btn-theme btn-block"  type="button" onclick="approve()"> Approve </button></td>
+                                    <td><button id="clrbtn" class="btn btn-theme btn-block"   onclick="reject()" type="reset"><i class="fa"></i> Reject </button></td>
+                                </tr>
+                        
+                    </table>
+              </div>
+              
+		</section><! --wrapper -->
       </section><!-- /MAIN CONTENT -->
 
       <!--main content end-->
       <!--footer start-->
-     
+      
       <!--footer end-->
   </section>
 

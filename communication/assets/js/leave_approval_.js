@@ -21,7 +21,7 @@ function getLeavesList(){
             console.log('resp',respObj);
             
             for(i=0; i<respObj.length;i++){
-                txt += '<tr><td>' + respObj[i].emp_id + '<td><td><span class="badge bg-success">Approved</span></td><td><a class="btn btn-default btn-sm" onclick="getLeaveData('+ i.valueOf() + ')">Verify</a></td></tr>';
+                txt += '<tr><td>' + respObj[i].emp_id + '<td><td><span class="badge bg-success">Pending</span></td><td><a class="btn btn-default btn-sm" onclick="getLeaveData('+ i.valueOf() + ')">Verify</a></td></tr>';
             }
             txt += '</tbody></table>'; 
             document.getElementById("InsertListHere").innerHTML = txt;

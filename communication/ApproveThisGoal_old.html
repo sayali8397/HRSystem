@@ -13,38 +13,25 @@
             getData();
         }
         function getName(){
-            document.body.style.zoom="120%";
+            document.body.style.zoom="130%";
             jsonEmpDetails = JSON.parse(localStorage.getItem('Emp_Details'));
             document.getElementById("empname").innerHTML = jsonEmpDetails.emp_name;
-            //document.getElementById("empid").innerHTML = jsonEmpDetails.emp_id;
         }
         function getData() {
-            jsonLeaveDetails = JSON.parse(localStorage.getItem('All_Leaves_Details'));
-            var curr = parseInt(localStorage.getItem('Curr_Leave'));
-            console.log(jsonLeaveDetails[parseInt(localStorage.getItem('Curr_Leave'))]);
-            document.getElementById("empid").innerHTML = jsonLeaveDetails[curr].emp_id;
-            document.getElementById("totleave").innerHTML = jsonLeaveDetails[curr].total_leaves;
-            document.getElementById("takenleave").innerHTML = jsonLeaveDetails[curr].leaves_consumed;
-            document.getElementById("balanceleave").innerHTML = jsonLeaveDetails[curr].leaves_accumulated;
-            document.getElementById('leavetype').innerHTML = jsonLeaveDetails[curr].leave_type;
-            document.getElementById('leavefrom').innerHTML = jsonLeaveDetails[curr].leave_from;
-            document.getElementById('leaveuntil').innerHTML = jsonLeaveDetails[curr].leave_to;
-            document.getElementById('contactnumber').innerHTML = jsonLeaveDetails[curr].contact_no;
-            document.getElementById('leavereason').innerHTML = jsonLeaveDetails[curr].leave_reason;
-            document.getElementById('todaysdate').innerHTML = jsonLeaveDetails[curr].date_applied;
-
+            jsonGoalDetails = JSON.parse(localStorage.getItem('All_Goals_Details'));
+            console.log(jsonGoalDetails[parseInt(localStorage.getItem('Curr_Goal'))]);
+            document.getElementById("goaldata").innerHTML = JSON.stringify(jsonGoalDetails[parseInt(localStorage.getItem('Curr_Goal'))]);
+            
         }    
         function approve() {
-            window.alert("Leave Approved.");
-            window.open("approveLeave.html", "_self");
-            //Write code to reflect in the databse
+            window.alert("Goal Sheet Approved.");
+            window.open("approveGoalsheet.html", "_self");
         }   
         
         function reject() {
-            window.alert("Leave Application Rejected.");
-            window.open("approveLeave.html", "_self");
-            //Write code to reflect in the database.
-        }   
+            window.alert("Goal Sheet Rejected.");
+            window.open("approveGoalsheet.html", "_self");
+        }
     </script>
     <title>Home-HR Portal</title>
 
@@ -130,7 +117,6 @@
                    
                     <ul class="sub">
                         <li><a  href="lDDashboard.html">My L & D</a></li>
-                        <li><a  href="seeLD.html">Verify L & D </a></li>
                     </ul>                </li>
               </ul>
               <!-- sidebar menu end-->
@@ -144,82 +130,15 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
-            <h3> Leave Application</h3>
-            <div style="height:30px;background-color:rgb(58, 161, 221);color:white;font-size:20px"><h>Applicant Information</h></div>
-            <div>
-                
-                <table style="width:50%;text-align:left">
-                    <tr class="tab"><td>Employee ID  :</td>
-                      <td id="empid">em123</td>
-                 <td>Name  :</td>
-                      <td id="empname1">Parto Bamford</td></tr>
-                </table>
-            </div>
-            
-            <div style="height:30px;background-color:rgb(58, 161, 221);color:white;font-size:20px"><h>Annual Leave Table</h></div>
-            <div>
-                
-                <table style="width:100%;text-align:left">
-                    <tr class="tab"><td>Total : <td id="totleave">:</td>
-                  <td>Taken :</td>
-                  <td id="takenleave"></td>
-                     <td> Balance :</td> 
-                  <td id="balanceleave">Balance &nbsp &nbsp &nbsp :</td><td></td></tr>
-                </table>
-            </div>
-            
-            <div style="height:30px;background-color:rgb(58, 161, 221);color:white;font-size:20px"><h>Details Of Event:</h></div>
-            
-            <div>
-                  
-                  <table style="width:100%;text-align:center">
-                      <tr class="tab"><td style="text-align:left">Date Applied &nbsp&nbsp:
-                          <span id="todaysdate"></span>
-                              
-                    <tr class="tab"><td style="text-align:left">Leave type &nbsp&nbsp&nbsp&nbsp&nbsp:
-                    <span id="leavetype"> </span>    
-                    </tr>
-                          <tr style="text-align:left">
-                              <td>Leave From : 
-                              <span id="leavefrom"> </span>
-                              <td>Leave Until :
-                              <span id="leaveuntil"> </span>
-                          </tr>
-                          <tr>
-                            
-                          </tr>
-                          <tr style="text-align:left">
-                              <td> <br> Contact No. :
-                              <span id="contactnumber"></span>
-                          </tr>
-                          <tr>
-                                
-                          </tr>
-                            <tr style="text-align:left">
-                                <td> <br> Leave Reason :
-                                <span id="leavereason"> </span>
-                            </tr>        
-                            </td>                          
-                  </table>
-              </div>
-              
-              <div style="height:30px;background-color:rgb(58, 161, 221);color:white;font-size:20px"><h>Verfication And Approval</h></div>
-            <div>
-                <br>
-                <br>
-            </div>
-            <div >
-                  <table>
-                          <tr>
-                                  <td><button id="loginbtn" class="btn btn-theme btn-block"  type="button" onclick="approve()"> Approve </button></td>
-                                  <td><button id="clrbtn" class="btn btn-theme btn-block"  onclick="reject()" type="reset"><i class="fa"></i> Decline </button></td>
-                              </tr>
-                      
-                  </table>
-              </div>  
-            
-  
-    
+          	<h3></h3>
+          	<div class="row mt">
+          		<div class="col-lg-12">
+                <p id="goaldata">
+
+                </p> 
+                </div>
+          	</div>
+			
 		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
 
