@@ -23,7 +23,17 @@
             document.getElementById("leavedata").innerHTML = JSON.stringify(jsonLeaveDetails[parseInt(localStorage.getItem('Curr_Leave'))]);
             
         }    
-           
+        function approve() {
+            window.alert("Leave Approved.");
+            window.open("approveLeave.html", "_self");
+            //Write code to reflect in the databse
+        }   
+        
+        function reject() {
+            window.alert("Leave Application Rejected.");
+            window.open("approveLeave.html", "_self");
+            //Write code to reflect in the database.
+        }
     </script>
     <title>Home-HR Portal</title>
 
@@ -109,7 +119,6 @@
                    
                     <ul class="sub">
                         <li><a  href="lDDashboard.html">My L & D</a></li>
-                        <li><a  href="seeLD.html">Verify L & D </a></li>
                     </ul>                </li>
               </ul>
               <!-- sidebar menu end-->
