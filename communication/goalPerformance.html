@@ -7,12 +7,22 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>PositiveImpact
-
-    </title>
+    <title>DB-HR Employee Goal Performance</title>
     <script src=".\assets\js\goal_sheet_.js"></script>
-
+    <script>
+            function getName(){
+                document.body.style.zoom="90%";
+                jsonEmpDetails = JSON.parse(localStorage.getItem('Emp_Details'));
+                document.getElementById("empnameside").innerHTML = jsonEmpDetails.emp_name;
+            }
+                
+               
+        </script>
     <!-- Bootstrap core CSS -->
+    <style>
+    td { text-align: left; }
+    </style>
+    <link href="assets/css/stylesheet.css" rel="stylesheet">
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -28,7 +38,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body onload="getName()">
 
   <section id="container" >
       <!-- **********************************************************************************************************************************************************
@@ -40,147 +50,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>DASHGUM FREE</b></a>
-            <!--logo end-->
-            <div class="nav notify-row" id="top_menu">
-                <!--  notification start -->
-                <ul class="nav top-menu">
-                    <!-- settings start -->
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
-                            <i class="fa fa-tasks"></i>
-                            <span class="badge bg-theme">4</span>
-                        </a>
-                        <ul class="dropdown-menu extended tasks-bar">
-                            <div class="notify-arrow notify-arrow-green"></div>
-                            <li>
-                                <p class="green">You have 4 pending tasks</p>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <div class="task-info">
-                                        <div class="desc">DashGum Admin Panel</div>
-                                        <div class="percent">40%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <div class="task-info">
-                                        <div class="desc">Database Update</div>
-                                        <div class="percent">60%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <div class="task-info">
-                                        <div class="desc">Product Development</div>
-                                        <div class="percent">80%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <div class="task-info">
-                                        <div class="desc">Payments Sent</div>
-                                        <div class="percent">70%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                                            <span class="sr-only">70% Complete (Important)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="external">
-                                <a href="#">See All Tasks</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- settings end -->
-                    <!-- inbox dropdown start-->
-                    <li id="header_inbox_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="badge bg-theme">5</span>
-                        </a>
-                        <ul class="dropdown-menu extended inbox">
-                            <div class="notify-arrow notify-arrow-green"></div>
-                            <li>
-                                <p class="green">You have 5 new messages</p>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Zac Snider</span>
-                                    <span class="time">Just now</span>
-                                    </span>
-                                    <span class="message">
-                                        Hi mate, how is everything?
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Divya Manian</span>
-                                    <span class="time">40 mins.</span>
-                                    </span>
-                                    <span class="message">
-                                     Hi, I need your help with this.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Dan Rogers</span>
-                                    <span class="time">2 hrs.</span>
-                                    </span>
-                                    <span class="message">
-                                        Love your new Dashboard.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Dj Sherman</span>
-                                    <span class="time">4 hrs.</span>
-                                    </span>
-                                    <span class="message">
-                                        Please, answer asap.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">See all messages</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- inbox dropdown end -->
-                </ul>
-                <!--  notification end -->
+            <a href="index.html" class="logo"><b>DB-HR portal</b></a>
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
@@ -199,82 +69,42 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Marcel Newman</h5>
-              	  	
-                  <li class="mt">
-                      <a href="index.html">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
-                      </a>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
-                          <span>UI Elements</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="general.html">General</a></li>
-                          <li><a  href="buttons.html">Buttons</a></li>
-                          <li><a  href="panels.html">Panels</a></li>
-                      </ul>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-cogs"></i>
-                          <span>Components</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="calendar.html">Calendar</a></li>
-                          <li><a  href="gallery.html">Gallery</a></li>
-                          <li><a  href="todo_list.html">Todo List</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a class="active" href="javascript:;" >
-                          <i class="fa fa-book"></i>
-                          <span>Extra Pages</span>
-                      </a>
-                      <ul class="sub">
-                          <li class="active"><a  href="blank.html">Goal Performance</a></li>
-                          <li><a  href="login.html">Login</a></li>
-                          <li><a  href="lock_screen.html">Lock Screen</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-tasks"></i>
-                          <span>Forms</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="form_component.html">Form Components</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-th"></i>
-                          <span>Data Tables</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="basic_table.html">Basic Table</a></li>
-                          <li><a  href="responsive_table.html">Responsive Table</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class=" fa fa-bar-chart-o"></i>
-                          <span>Charts</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="morris.html">Morris</a></li>
-                          <li><a  href="chartjs.html">Chartjs</a></li>
-                      </ul>
-                  </li>
-
-              </ul>
-              <!-- sidebar menu end-->
+                <p class="centered"><a href="profile.html"><img src="assets/img/db_emp.png" class="img-circle" width="60"></a></p>
+                <h5 id="empnameside" class="centered">Marcel Newman</h5>
+                    
+              
+              <li class="sub-menu">
+                  <a href="javascript:;" >
+                      <i class="fa fa-desktop"></i>
+                      <span>Leave Application</span>
+                  </a>
+                  <ul class="sub">
+                        <li><a  href="leaveDashboard.html">My Leave Dashboard</a></li>
+                      <li><a  href="leave_form.html">Apply Leave</a></li>
+                      <li><a  href="approveLeave.html">Approve Leave</a></li>
+                  </ul>
+              </li>
+              <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-desktop"></i>
+                    <span>Goal Performance</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="goalPerformace.html">Fill Goal Sheet</a></li>
+                    <li><a  href="approveGoalsheet.html">Approve Goal Sheet</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="index.html">
+                    <i class="fa fa-desktop"></i>
+                    <span>Learning & Development</span>
+                </a>
+                <ul class="sub">
+                        <li><a  href="goal_performance.html">My L & D</a></li>
+                        <li><a  href="approveGoalsheet.html">Verify L & D </a></li>
+                    </ul> 
+            </li>
+          </ul> <!-- sidebar menu end-->
           </div>
       </aside>
       <!--sidebar end-->
@@ -285,228 +115,239 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
-              <h3><i class="fa fa-angle-right"></i> GOAL PERFORMANCE</h3>
-              <div class="row mt">
-                <div class="col-lg-12">
-                <div class="form-panel">
-                 
-              <h4><i class="fa fa-angle-right"></i> EMPLOYEE RATING:</h4>
-            
-                    <div class="back" ><h class="mb" i class="fa fa-angle-right"></i> INTERPERSONAL SKILLS</h></div>
-                      <table class="inter">
-                          <tr class="tab">
-                              <td class="td">
-                                    RELATIONSHIP WITH CO-WORKERS :
-                              </td>
-                              <td>
-                                <input id="ip1" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                              </td>
-                          </tr>
-                          
-                          <tr class="tab">
-                            <td class="td">
-                                  PROBLEM SOLVING :
-                            </td>
-                            <td>
-                                <input id="ip2" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-                        <tr class="tab">
-                            <td class="td">
-                                  DECISION MAKING :
-                            </td>
-                            <td>
-                                <input id="ip3" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-                        <tr class="tab">
-                            <td class="td">
-                                  TIME MANAGEMENT :
-                            </td>
-                            <td>
-                                <input id="ip4" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-
-                      </table>
-                      
-                      <div class="back" ><h class="mb" i class="fa fa-angle-right"></i> DEVELOPMENT</h></div>
-                      <table class="inter">
-                          <tr class="tab">
-                              <td class="td">
-                                     SEEKS T&D :
-                              </td>
-                              <td>
-                                <input id="dev1" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                              </td>
-                          </tr>
-                          
-                          <tr class="tab">
-                            <td class="td">
-                                  OPEN TO IDEAS :
-                            </td>
-                            <td>
-                                <input id="dev2" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-                        
-                      </table>
-                      <div class="back" ><h class="mb" i class="fa fa-angle-right"></i> CODE OF CONDUCT</h></div>
-                      <table class="inter">
-                          <tr class="tab">
-                              <td class="td">
-                                    WORK PLACE ETTIQUITTES :
-                              </td>
-                              <td>
-                                <input id="coc1" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                              </td>
-                          </tr>
-                          
-                          <tr class="tab">
-                            <td class="td">
-                                  PUNCTUALITY :
-                            </td>
-                            <td>
-                                <input id="coc2" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-                        <tr class="tab">
-                            <td class="td">
-                                  DISCIPLINE :
-                            </td>
-                            <td>
-                                <input id="coc3" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-                        <tr class="tab">
-                            <td class="td">
-                                  ATTENDANCE :
-                            </td>
-                            <td>
-                                <input id="coc4" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-
-                      </table>
-                      
-                      <div class="back" ><h class="mb" i class="fa fa-angle-right"></i> COMMUNICATION SKILLS</h></div><br>
-                      <table class="inter">
-                          <tr class="tab">
-                              <td class="td">
-                                    ORAL AND WRITTEN EXPRESSION :
-                              </td>
-                              <td>
-                                <input id="cs1" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                              </td>
-                          </tr>
-                          
-                          <tr class="tab">
-                            <td class="td">
-                                  SHARING OF KNOWLEDGE :
-                            </td>
-                            <td>
-                                <input id="cs2" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-                        
-                      </table>
-                    
-                      <div class="back" ><h class="mb" i class="fa fa-angle-right"></i>PERSONALITY</h></div><br>
-                      <table class="inter">
-                          <tr class="tab">
-                              <td class="td">
-                                    ENTHUSIASTIC :
-                              </td>
-                              <td>
-                                <input id="p1" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                              </td>
-                          </tr>
-                          
-                          <tr class="tab">
-                            <td class="td">
-                                  TRUSTWORTHY :
-                            </td>
-                            <td>
-                                <input id="p2" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-
-                      </table>
-                      
-                      <div class="back" ><h class="mb" i class="fa fa-angle-right"></i>LEADERSHIP</h></div><br>
-                      <table class="inter">
-                          <tr class="tab">
-                              <td class="td">
-                                    TEAM WORK :
-                              </td>
-                              <td>
-                                <input id="ld1" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                              </td>
-                          </tr>
-                          
-                          <tr class="tab">
-                            <td class="td">
-                                  TEAM BUILDING :
-                            </td>
-                            <td>
-                                <input id="ld2" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-                        <tr class="tab">
-                            <td class="td">
-                                  NEW STRATEGY AND DIRECTION :
-                            </td>
-                            <td>
-                                <input id="ld3" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-                        <tr class="tab">
-                            <td class="td">
-                                  PARTICIPATION IN HR ACTIVITIES :
-                            </td>
-                            <td>
-                                <input id="ld4" type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                        </tr>
-
-                      </table>
-                                              
-                      <h4><i class="fa fa-angle-right"></i> FILLED BY MANAGER:</h4> 
-                      <table class="inter">
-                        <tr class="tab">
-                            <td class="td">
-                                  VERIFIED BY :
-                            </td>
-                            <td>
-                              <input type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                            </td>
-                            <td class="td">
-                                APPROVED BY :
-                          </td>
-                          <td>
-                            <input type="number" class="in form-control" min="0" max="5" step="0.01"size="10">
-                          </td>
-                        </tr>
-                        <tr >
-                            <td></td><td></td>
+          	<h3><i class="fa fa-angle-right"></i> Goal Performance</h3>
+          
+                    <table >
+                        <tr>
                             <td >
-                                <input type="button" class="button" style="background-color: #4CAF50;" onclick="goalSheetCall()" value="Save">
-                          </td>
-                          <td>
-                            <input type="button" class="button" style="background-color: red;" value="Discard">
-                          </td>
+                               <h4> INTERPERSONAL SKILLS</h>
+                            </td>
+                            <td>
+
+                            </td>
+                            <td >
+                                <h4> COMMUNICATION SKILLS</h>
+                            </td>
+                            <td class="td">
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td" style="text-align:left">
+                                <h5>Relationship With Co-workers :</h5>
+                            </td>
+                            <td class="ts" >
+                                <input type="number" id="ip1" min="0" max="5" step="0.01">
+                            </td>
+                            <td class="td" style="text-align:left">
+                                Oral And Written Expression :
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="cs1" min="0" max="5" step="0.01">
+                            </td>
+                        </tr>
+                        <tr class="tab">
+                            <td class="td" style="text-align:left">
+                                Problem Solving :
+                            </td>
+                            <td class="ts" >
+                                <input type="number" id="ip2" min="0" max="5" step="0.01">
+                            </td>
+                            <td class="td" style="text-align:left">
+                                Sharing Of Knowledge :
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="cs2" min="0" max="5" step="0.01">
+                            </td>
+                        </tr>
+                        <tr class="tab">
+                            <td class="td" style="text-align:left" >
+                               Decision Making :
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="ip3" min="0" max="5" step="0.01">
+                            </td>
+                            <td class="td">
+                               
+                            </td>
+                            <td class="td">
+                                
+                            </td>
+                        </tr>
+                        <tr class="tab" >
+                            <td class="td" style="text-align:left">
+                                Time Management :
+                            </td>
+                            <td class="ts" >
+                                <input type="number" id="ip4" min="0" max="5" step="0.01">
+                            </td>
+                            <td class="td">
+                            
+                            </td>
+                            <td class="td">
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <h4>DEVELOPMENT</h4>
+                            </td>
+                            <td class="td" width="100%">
+                                
+                            </td>
+                            <td >
+                                <h4>PERSONALITY</h4>
+                            </td>
+                            <td class="td">
+                                
+                            </td>
+                        </tr>
+                        <tr class="tab">
+                            <td class="td" style="text-align:left">
+                                Seeks T&D :
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="dev1" min="0" max="5" step="0.01"size="10">
+                            </td>
+                            <td class="td" style="text-align:left">
+                                Enthusiastic :
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="p1" min="0" max="5" step="0.01"size="10">
+                            </td>
+                        </tr>
+                        <tr class="tab">
+                            <td class="td" style="text-align:left">
+                                Open To Ideas:
+                            </td>
+                            <td class="ts">
+                                <input type="number"  id="dev2" min="0" max="5" step="0.01"size="10">
+                            </td>
+                            <td class="td" style="text-align:left">
+                                Trustworthy :
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="p2" min="0" max="5" step="0.01"size="10">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>CODE OF CONDUCT</h4>
+                            </td>
+                            <td class="ts">
+                                
+                            </td>
+                            <td >
+                                <h4>LEADERSHIP</h4>
+                            </td>
+                            <td class="ts">
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td" style="text-align:left">
+                                Work Place Ettiquitte :
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="coc1" min="0" max="5" step="0.01"size="10">
+                            </td>
+                            <td class="td" style="text-align:left">
+                                Team Work :
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="ld1" min="0" max="5" step="0.01"size="10">
+                            </td>
+                        </tr>
+                        <tr class="tab">
+                            <td class="td" style="text-align:left">
+                                Punctuality:
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="coc2" min="0" max="5" step="0.01"size="10">
+                            </td>
+                            <td class="td" style="text-align:left">
+                                Team Building:
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="ld2" min="0" max="5" step="0.01"size="10">
+                            </td>
+                        </tr>
+                        <tr class="tab">
+                            <td class="td" style="text-align:left">
+                                Discipline:
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="coc3" min="0" max="5" step="0.01"size="10">
+                            </td>
+                            <td class="td" style="text-align:left">
+                                New Strategy And Direction :
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="ld3" min="0" max="5" step="0.01"size="10">
+                            </td>
+                        </tr>
+                        <tr class="tab">
+                            <td class="td" style="text-align:left">
+                                Attendance:
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="coc4"  min="0" max="5" step="0.01"size="10">
+                            </td>
+                            <td class="td" style="text-align:left">
+                                Participation And HR Activities :
+                            </td>
+                            <td class="ts">
+                                <input type="number" id="ld4" min="0" max="5" step="0.01"size="10">
+                            </td>
+                        </tr>
+                   
+                     
+                        </table>
+                        <h4>Approval Details:</h4>
+                        <table >
+                        <tr>
+                            <td class="td" style="text-align:left">
+                                Approved By:
+                            </td>
+                            <td class="ts" style="text-align:right">
+                                <input type="number"  min="0" max="5" step="0.01"size="10">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="td" style="text-align:left">
+                                Verified By :
+                            </td>
+                            <td class="ts" style="text-align:right">
+                                <input type="number"  min="0" max="5" step="0.01"size="10">
+                            </td>
+                        </tr>
+                        <tr class="tab">
+                            <td class="td">
+                               
+                            </td>
+                            <td class="ts">
+                                
+                            </td>
+                            <td class="td">
+                                <input type="button" onclick="goalSheetCall()" value="Save" style="background-color:green;color:white;border-radius:25px;height:30px">
+                            </td>
+                            <td class="ts">
+                                <input type="button" value="Clear" style="background-color:red;color:white;border-radius:25px;height:30px">
+                            </td>
                         </tr>
                     
-
-                      
-                      
-                      
-                    
+                    </table>
+                  
+          		</div>
+          	</div>
+			
 		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
 
       <!--main content end-->
+      <!--footer start-->
      
+      <!--footer end-->
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->

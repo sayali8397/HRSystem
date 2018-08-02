@@ -13,7 +13,10 @@ function loginCall(){
         password:password_form
     }
 
-    var baseURL='http://10.1.3.186:8083/login'
+    var baseURL='http://localhost:8083/login'
+
+    //var baseURL='http://10.1.3.186:8083/login'
+    
     console.log('loginObj',loginObj);
     
     var xhttp = new XMLHttpRequest();
@@ -29,7 +32,7 @@ function loginCall(){
                 localStorage.setItem('Emp_Details', JSON.stringify(respObj.data[0]));
                 console.log('Valid', JSON.parse(localStorage.getItem('Emp_Details')));
                 window.alert('Authentication Successful. :)');
-                window.open('Home.html');
+                window.open('index.html', "_self");
             }
             else {
                 window.alert('Username or Password is incorrect. :(');

@@ -34,8 +34,10 @@ function signupCall(){
         designation:designation_form    
         
     }
+    
+//    var baseURL='http://10.1.3.186:8083/signUp'
+    var baseURL='http://localhost:8083/signUp'
 
-    var baseURL='http://10.1.3.186:8083/signUp'
     console.log('signupObj',signupObj);
    
     var xhttp = new XMLHttpRequest();

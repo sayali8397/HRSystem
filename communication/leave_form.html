@@ -7,15 +7,26 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>PositiveImpact</title>
+    <title>DB-HR Leave Application</title>
 	<script src="C:\Users\Admin\Desktop\communication\assets\js\leave_app_.js"></script>
+    <script>
+            function Start() {
+                getName();
+                getBasicInfo();
+            }
+            function getName(){
+                jsonEmpDetails = JSON.parse(localStorage.getItem('Emp_Details'));
+                document.getElementById("empnameside").innerHTML = jsonEmpDetails.emp_name;
+            }
+    
+    </script>
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
         
-
     <!-- Custom styles for this template -->
+    <link href="assets/css/stylesheet.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 
@@ -26,7 +37,7 @@
     <![endif]-->
   </head>
 
-  <body onload="getBasicInfo()">
+  <body  onload="Start()">
 
   <section id="container" >
       <!-- **********************************************************************************************************************************************************
@@ -38,147 +49,8 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="#0" class="logo"><b>DASHGUM FREE</b></a>
+            <a href="index.html" class="logo"><b>DB-HR portal</b></a>
             <!--logo end-->
-            <div class="nav notify-row" id="top_menu">
-                <!--  notification start -->
-                <ul class="nav top-menu">
-                    <!-- settings start -->
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#0">
-                            <i class="fa fa-tasks"></i>
-                            <span class="badge bg-theme">4</span>
-                        </a>
-                        <ul class="dropdown-menu extended tasks-bar">
-                            <div class="notify-arrow notify-arrow-green"></div>
-                            <li>
-                                <p class="green">You have 4 pending tasks</p>
-                            </li>
-                            <li>
-                                <a href="#0">
-                                    <div class="task-info">
-                                        <div class="desc">DashGum Admin Panel</div>
-                                        <div class="percent">40%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0">
-                                    <div class="task-info">
-                                        <div class="desc">Database Update</div>
-                                        <div class="percent">60%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0">
-                                    <div class="task-info">
-                                        <div class="desc">Product Development</div>
-                                        <div class="percent">80%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0">
-                                    <div class="task-info">
-                                        <div class="desc">Payments Sent</div>
-                                        <div class="percent">70%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                                            <span class="sr-only">70% Complete (Important)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="external">
-                                <a href="#0">See All Tasks</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- settings end -->
-                    <!-- inbox dropdown start-->
-                    <li id="header_inbox_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#0">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="badge bg-theme">5</span>
-                        </a>
-                        <ul class="dropdown-menu extended inbox">
-                            <div class="notify-arrow notify-arrow-green"></div>
-                            <li>
-                                <p class="green">You have 5 new messages</p>
-                            </li>
-                            <li>
-                                <a href="#0">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Zac Snider</span>
-                                    <span class="time">Just now</span>
-                                    </span>
-                                    <span class="message">
-                                        Hi mate, how is everything?
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Divya Manian</span>
-                                    <span class="time">40 mins.</span>
-                                    </span>
-                                    <span class="message">
-                                     Hi, I need your help with this.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Dan Rogers</span>
-                                    <span class="time">2 hrs.</span>
-                                    </span>
-                                    <span class="message">
-                                        Love your new Dashboard.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0">
-                                    <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Dj Sherman</span>
-                                    <span class="time">4 hrs.</span>
-                                    </span>
-                                    <span class="message">
-                                        Please, answer asap.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#0">See all messages</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- inbox dropdown end -->
-                </ul>
-                <!--  notification end -->
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
@@ -197,81 +69,42 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="#0"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Marcel Newman</h5>
-              	  	
-                  <li class="mt">
-                      <a href="#0">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
-                      </a>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a href="#0" >
-                          <i class="fa fa-desktop"></i>
-                          <span>UI Elements</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="#0">General</a></li>
-                          <li><a  href="#0">Buttons</a></li>
-                          <li><a  href="#0">Panels</a></li>
-                      </ul>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a href="#0" >
-                          <i class="fa fa-cogs"></i>
-                          <span>Components</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="#0">Calendar</a></li>
-                          <li><a  href="#0">Gallery</a></li>
-                          <li><a  href="#0">Todo List</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a class="active" href="#0" >
-                          <i class="fa fa-book"></i>
-                          <span>Extra Pages</span>
-                      </a>
-                      <ul class="sub">
-                          <li class="active"><a  href="#0">Blank Page</a></li>
-                          <li><a  href="#0">Login</a></li>
-                          <li><a  href="#0">Lock Screen</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="#0" >
-                          <i class="fa fa-tasks"></i>
-                          <span>Forms</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="#0">Form Components</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="#0" >
-                          <i class="fa fa-th"></i>
-                          <span>Data Tables</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="basic_table.html">Basic Table</a></li>
-                          <li><a  href="responsive_table.html">Responsive Table</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class=" fa fa-bar-chart-o"></i>
-                          <span>Charts</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="morris.html">Morris</a></li>
-                          <li><a  href="chartjs.html">Chartjs</a></li>
-                      </ul>
-                  </li>
-
-              </ul>
+                <p class="centered"><a href="profile.html"><img src="assets/img/db_emp.png" class="img-circle" width="60"></a></p>
+                <h5 id="empnameside" class="centered">Marcel Newman</h5>
+                    
+              
+              <li class="sub-menu">
+                  <a href="javascript:;" >
+                      <i class="fa fa-desktop"></i>
+                      <span>Leave Application</span>
+                  </a>
+                  <ul class="sub">
+                        <li><a  href="leaveDashboard.html">My Leave Dashboard</a></li>
+                      <li><a  href="leave_form.html">Apply Leave</a></li>
+                      <li><a  href="approveLeave.html">Approve Leave</a></li>
+                  </ul>
+              </li>
+              <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-desktop"></i>
+                    <span>Goal Performance</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="goalPerformance.html">Fill Goal Sheet</a></li>
+                    <li><a  href="approveGoalsheet.html">Approve Goal Sheet</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="index.html">
+                    <i class="fa fa-desktop"></i>
+                    <span>Learning & Development</span>
+                </a>
+                <ul class="sub">
+                        <li><a  href="goalPerformance.html">My L & D</a></li>
+                        <li><a  href="approveGoalsheet.html">Verify L & D </a></li>
+                    </ul> 
+            </li>
+          </ul>
               <!-- sidebar menu end-->
           </div>
       </aside>
@@ -283,164 +116,121 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i> Leave Application Form</h3>
-          	<div class="row mt">
-          		<div class="col-lg-12">
-                        <div class="row mt">
-                                <div class="col-lg-12">
-                                <div class="form-panel">
-                                    <form class="form-horizontal style-form" method="get">
-                                        <div class="form-group-head">
-                                            APPLICANT DETAILS
-                                        </div>
-                                        <div class="form-group">
-                                                <table class="head1">
-                                                    <tr><td>Employee ID</td><td id="empid">em123</td></tr>
-                                                    <tr><td>Name </td><td id="empname">Root</td></tr>
-                                                </table>
-                                                                                           
-                                        </div>
-                                        <div class="form-group-head">
-                                                ANNUAL LEAVE INFO
-                                        </div>
-                                        <div class="form-group">
-                                                <table class="head1">
-                                                    <tr><td>Total:</td><td id="totleave">12</td><td>Taken:</td><td id="takenleave">4</td><td>Balance:</td><td id="balanceleave">8</td></tr>
-                                                </table>                                                  
-                                        </div>
-                                        <div class="form-group-head">
-                                                DETAILS OF THE EVENT
-                                        </div>
-                                        <div class="form-group">
-                                                <label class="col-sm-2 col-sm-2 control-label">Date Applied</label>
-                                                <div class="col-sm-10">
-                                                    <span class="form-control" id="todaysdate"></span>
-
-                                                    <script>
-                                                    var dt = new Date();
-                                                    var dd = dt.getDate();
-                                                    var mm = dt.getMonth()+1;
-                                                    var yyyy = dt.getFullYear();
-                                                    //document.getElementById("TodaysDate").innerHTML = dt.toLocaleDateString();
-                                                    var today = yyyy+'-'+mm+'-'+dd;
-                                                    console.log(today);
-                                                    document.getElementById("todaysdate").innerHTML = today;
-                                                    </script>
-                                                </div>
-                                            </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 col-sm-2 control-label">Leave Type</label>
-                                            <div class="col-sm-10">
-                                                
-                                                <select class="form-control" id="leavetype">
-                                                    <option value="">--Select--</option>
-                                                    <option value="casual">Casual</option>
-                                                    <option value="paid">Paid</option>
-                                                    <option value="sick">Sick</option>
-                                                    <option value="others">Others</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 col-sm-2 control-label">Leave From</label>
-                                            <div class="col-sm-10">
-                                                <input id="leavefrom" type="date" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                                <label class="col-sm-2 col-sm-2 control-label">Leave Until</label>
-                                                <div class="col-sm-10">
-                                                    <input id="leaveuntil" type="date" class="form-control">
-                                                </div>
-                                            </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 col-sm-2 control-label">Contact Number</label>
-                                            <div class="col-sm-10">
-                                                <input class="form-control" id="contactnumber" type="text" >
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                                <label class="col-sm-2 col-sm-2 control-label">Leave Reason</label>
-                                                <div class="col-sm-10">
-                                                    <textarea class="form-control" id="leavereason"></textarea>
-                                                </div>
-                                            </div>
-                                        <div class="form-group-head">
-                                                    VERIFICATION AND APPROVAL
-                                            </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 col-sm-2 control-label">Substitute</label>
-                                            <div class="col-sm-10">
-                                                    <select id="substitute" class="form-control" disabled>
-                                                            <option value="">--Select--</option>
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
-                                                        </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                                <label class="col-sm-2 col-sm-2 control-label">Verified By</label>
-                                                <div class="col-sm-10">
-                                                        <select id="verified" class="form-control" disabled>
-                                                                <option value="">--Select--</option>
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
-                                                            </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                    <label class="col-sm-2 col-sm-2 control-label">Approved By</label>
-                                                    <div class="col-sm-10">
-                                                            <select id="approved" class="form-control" disabled>
-                                                                    <option value="">--Select--</option>
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
-                                                                </select>
-                                                    </div>
-                                                </div>
-                                    <div class="form-group-head">
-                                        <table class="submit-leave">
-                                            <tr>
-                                                <td>
-                                                    <button id="submitLeave" class="btn btn-theme btn-block" type="button" onclick="leaveAppCall()">SUBMIT</button>
-                                                </td>
-                                                <td>
-                                                        <button id="clearLeave" class="btn btn-theme btn-block" type="reset">CLEAR</button>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>  
-                                    </form>
-                                </div>
-                                </div><!-- col-lg-12-->      	
-                            </div><!-- /row -->
-          		</div>
-          	</div>
+          	<h3> Leave Application</h3>
+              <div style="height:30px;background-color:rgb(58, 161, 221);color:white;font-size:20px"><h>Applicant Information</h></div>
+              <div>
+                  
+                  <table style="width:50%;text-align:left">
+                      <tr class="tab"><td>Employee ID  :</td>
+                        <td id="empid">em123</td>
+                   <td>Name  :</td>
+                        <td id="empname">Root</td></tr>
+                  </table>
+              </div>
+              
+              <div style="height:30px;background-color:rgb(58, 161, 221);color:white;font-size:20px"><h>Annual Leave Table</h></div>
+              <div>
+                  
+                  <table style="width:100%;text-align:left">
+                      <tr class="tab"><td id="totleave">Total &nbsp &nbsp &nbsp:</td>
+                    
+                    <td id="takenleave">Taken &nbsp &nbsp &nbsp:</td>
+                        
+                    <td id="balanceleave">Balance &nbsp &nbsp &nbsp :</td><td></td></tr>
+                  </table>
+              </div>
+              
+              <div style="height:30px;background-color:rgb(58, 161, 221);color:white;font-size:20px"><h>Details Of Event:</h></div>
+              
+              <div>
+                    
+                    <table style="width:100%;text-align:center">
+                        <tr class="tab"><td style="text-align:left">Date Applied &nbsp&nbsp:
+                            <span id="todaysdate"></span>
+                                <script>
+                                        var dt = new Date();
+                                        var dd = dt.getDate();
+                                        var mm = dt.getMonth()+1;
+                                        var yyyy = dt.getFullYear();
+                                        //document.getElementById("TodaysDate").innerHTML = dt.toLocaleDateString();
+                                        var today = yyyy+'-'+mm+'-'+dd;
+                                        console.log(today);
+                                        document.getElementById("todaysdate").innerHTML = today;
+                                        </script></td></tr>
+                      <tr class="tab"><td style="text-align:left">Leave type &nbsp&nbsp&nbsp&nbsp&nbsp:
+                            <select id="leavetype">
+                                    <option value="">--Select--</option>
+                                    <option value="casual">Casual</option>
+                                    <option value="paid">Paid</option>
+                                    <option value="sick">Sick</option>
+                                    <option value="others">Others</option>
+                                </select></tr>
+                          <tr class="tab"><td style="text-align:left">Leave From &nbsp&nbsp :
+                                <input id="leavefrom" type="date" >
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLeave Until  :
+                                    <input id="leaveuntil" type="date" ></tr>
+                                <tr class="tab"><td style="text-align:left">Contact No &nbsp&nbsp :
+                                        <input  id="contactnumber" type="text" ></tr>
+                                    <tr class="tab"><td style="text-align:left">Leave Reason  :
+                                            <textarea  id="leavereason"></textarea></td></tr>
+                                  
+                                      
+                    </table>
+                </div>
+                
+                <div style="height:30px;background-color:rgb(58, 161, 221);color:white;font-size:20px"><h>Verfication And Approval</h></div>
+              <div>
+                  
+                  <table style="text-align:center">
+                      <tr class="tab"><td>Substitute  :
+                    <select id="substitute" style="width:200px;height:30px">
+                            <option value="">--Select--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                        </select></td></tr>
+                        <tr class="tab"><td>Verified By  :
+                                <select id="verified" style="width:200px;height:30px">
+                                        <option value="">--Select--</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                    </select></td></tr>
+                 <tr class="tab"><td>Approved By  :
+                                <select id="approved" style="width:200px;height:30px">
+                                        <option value="">--Select--</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                    </select></td></tr>
+                                    
+                                    
+                          </table>
+              </div>
+              <div >
+                    <table>
+                            <tr>
+                                    <td><button id="loginbtn" class="btn btn-theme btn-block"  type="button" onclick="leaveAppCall()"> Apply </button></td>
+                                    <td><button id="clrbtn" class="btn btn-theme btn-block"  type="reset"><i class="fa"></i> Clear </button></td>
+                                </tr>
+                        
+                    </table>
+                </div>  
+              
 			
 		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
 
       <!--main content end-->
       <!--footer start-->
-      <footer class="site-footer">
-          <div class="text-center">
-              2014 - Alvarez.is
-              <a href="#0" class="go-top">
-                  <i class="fa fa-angle-up"></i>
-              </a>
-          </div>
-      </footer>
       <!--footer end-->
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script> 
+    <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
     <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
@@ -453,7 +243,6 @@
     <script src="assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    
   
   </body>
 </html>

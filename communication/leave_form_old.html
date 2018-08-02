@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>PositiveImpact</title>
+	<script src="C:\Users\Admin\Desktop\communication\assets\js\leave_app_.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body onload="getBasicInfo()">
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="#0" class="logo"><b>DASHGUM FREE</b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                <ul class="nav top-menu">
+                    <!-- settings start -->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#0">
+                            <i class="fa fa-tasks"></i>
+                            <span class="badge bg-theme">4</span>
+                        </a>
+                        <ul class="dropdown-menu extended tasks-bar">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">You have 4 pending tasks</p>
+                            </li>
+                            <li>
+                                <a href="#0">
+                                    <div class="task-info">
+                                        <div class="desc">DashGum Admin Panel</div>
+                                        <div class="percent">40%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0">
+                                    <div class="task-info">
+                                        <div class="desc">Database Update</div>
+                                        <div class="percent">60%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0">
+                                    <div class="task-info">
+                                        <div class="desc">Product Development</div>
+                                        <div class="percent">80%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0">
+                                    <div class="task-info">
+                                        <div class="desc">Payments Sent</div>
+                                        <div class="percent">70%</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                            <span class="sr-only">70% Complete (Important)</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="external">
+                                <a href="#0">See All Tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- settings end -->
+                    <!-- inbox dropdown start-->
+                    <li id="header_inbox_bar" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#0">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-theme">5</span>
+                        </a>
+                        <ul class="dropdown-menu extended inbox">
+                            <div class="notify-arrow notify-arrow-green"></div>
+                            <li>
+                                <p class="green">You have 5 new messages</p>
+                            </li>
+                            <li>
+                                <a href="#0">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Zac Snider</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                        Hi mate, how is everything?
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-divya.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Divya Manian</span>
+                                    <span class="time">40 mins.</span>
+                                    </span>
+                                    <span class="message">
+                                     Hi, I need your help with this.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-danro.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dan Rogers</span>
+                                    <span class="time">2 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Love your new Dashboard.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0">
+                                    <span class="photo"><img alt="avatar" src="assets/img/ui-sherman.jpg"></span>
+                                    <span class="subject">
+                                    <span class="from">Dj Sherman</span>
+                                    <span class="time">4 hrs.</span>
+                                    </span>
+                                    <span class="message">
+                                        Please, answer asap.
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0">See all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- inbox dropdown end -->
+                </ul>
+                <!--  notification end -->
+            </div>
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="login.html">Logout</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              
+              	  <p class="centered"><a href="#0"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+              	  <h5 class="centered">Marcel Newman</h5>
+              	  	
+                  <li class="mt">
+                      <a href="#0">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="#0" >
+                          <i class="fa fa-desktop"></i>
+                          <span>UI Elements</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="#0">General</a></li>
+                          <li><a  href="#0">Buttons</a></li>
+                          <li><a  href="#0">Panels</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="#0" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Components</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="#0">Calendar</a></li>
+                          <li><a  href="#0">Gallery</a></li>
+                          <li><a  href="#0">Todo List</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a class="active" href="#0" >
+                          <i class="fa fa-book"></i>
+                          <span>Extra Pages</span>
+                      </a>
+                      <ul class="sub">
+                          <li class="active"><a  href="#0">Blank Page</a></li>
+                          <li><a  href="#0">Login</a></li>
+                          <li><a  href="#0">Lock Screen</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="#0" >
+                          <i class="fa fa-tasks"></i>
+                          <span>Forms</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="#0">Form Components</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="#0" >
+                          <i class="fa fa-th"></i>
+                          <span>Data Tables</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="basic_table.html">Basic Table</a></li>
+                          <li><a  href="responsive_table.html">Responsive Table</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class=" fa fa-bar-chart-o"></i>
+                          <span>Charts</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="morris.html">Morris</a></li>
+                          <li><a  href="chartjs.html">Chartjs</a></li>
+                      </ul>
+                  </li>
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper site-min-height">
+          	<h3><i class="fa fa-angle-right"></i> Leave Application Form</h3>
+          	<div class="row mt">
+          		<div class="col-lg-12">
+                        <div class="row mt">
+                                <div class="col-lg-12">
+                                <div class="form-panel">
+                                    <form class="form-horizontal style-form" method="get">
+                                        <div class="form-group-head">
+                                            APPLICANT DETAILS
+                                        </div>
+                                        <div class="form-group">
+                                                <table class="head1">
+                                                    <tr><td>Employee ID</td><td id="empid">em123</td></tr>
+                                                    <tr><td>Name </td><td id="empname">Root</td></tr>
+                                                </table>
+                                                                                           
+                                        </div>
+                                        <div class="form-group-head">
+                                                ANNUAL LEAVE INFO
+                                        </div>
+                                        <div class="form-group">
+                                                <table class="head1">
+                                                    <tr><td>Total:</td><td id="totleave">12</td><td>Taken:</td><td id="takenleave">4</td><td>Balance:</td><td id="balanceleave">8</td></tr>
+                                                </table>                                                  
+                                        </div>
+                                        <div class="form-group-head">
+                                                DETAILS OF THE EVENT
+                                        </div>
+                                        <div class="form-group">
+                                                <label class="col-sm-2 col-sm-2 control-label">Date Applied</label>
+                                                <div class="col-sm-10">
+                                                    <span class="form-control" id="todaysdate"></span>
+
+                                                    <script>
+                                                    var dt = new Date();
+                                                    var dd = dt.getDate();
+                                                    var mm = dt.getMonth()+1;
+                                                    var yyyy = dt.getFullYear();
+                                                    //document.getElementById("TodaysDate").innerHTML = dt.toLocaleDateString();
+                                                    var today = yyyy+'-'+mm+'-'+dd;
+                                                    console.log(today);
+                                                    document.getElementById("todaysdate").innerHTML = today;
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Leave Type</label>
+                                            <div class="col-sm-10">
+                                                
+                                                <select class="form-control" id="leavetype">
+                                                    <option value="">--Select--</option>
+                                                    <option value="casual">Casual</option>
+                                                    <option value="paid">Paid</option>
+                                                    <option value="sick">Sick</option>
+                                                    <option value="others">Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Leave From</label>
+                                            <div class="col-sm-10">
+                                                <input id="leavefrom" type="date" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <label class="col-sm-2 col-sm-2 control-label">Leave Until</label>
+                                                <div class="col-sm-10">
+                                                    <input id="leaveuntil" type="date" class="form-control">
+                                                </div>
+                                            </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Contact Number</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" id="contactnumber" type="text" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <label class="col-sm-2 col-sm-2 control-label">Leave Reason</label>
+                                                <div class="col-sm-10">
+                                                    <textarea class="form-control" id="leavereason"></textarea>
+                                                </div>
+                                            </div>
+                                        <div class="form-group-head">
+                                                    VERIFICATION AND APPROVAL
+                                            </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">Substitute</label>
+                                            <div class="col-sm-10">
+                                                    <select id="substitute" class="form-control" disabled>
+                                                            <option value="">--Select--</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                        </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <label class="col-sm-2 col-sm-2 control-label">Verified By</label>
+                                                <div class="col-sm-10">
+                                                        <select id="verified" class="form-control" disabled>
+                                                                <option value="">--Select--</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                            </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">Approved By</label>
+                                                    <div class="col-sm-10">
+                                                            <select id="approved" class="form-control" disabled>
+                                                                    <option value="">--Select--</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                </select>
+                                                    </div>
+                                                </div>
+                                    <div class="form-group-head">
+                                        <table class="submit-leave">
+                                            <tr>
+                                                <td>
+                                                    <button id="submitLeave" class="btn btn-theme btn-block" type="button" onclick="leaveAppCall()">SUBMIT</button>
+                                                </td>
+                                                <td>
+                                                        <button id="clearLeave" class="btn btn-theme btn-block" type="reset">CLEAR</button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>  
+                                    </form>
+                                </div>
+                                </div><!-- col-lg-12-->      	
+                            </div><!-- /row -->
+          		</div>
+          	</div>
+			
+		</section><! --/wrapper -->
+      </section><!-- /MAIN CONTENT -->
+
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2014 - Alvarez.is
+              <a href="#0" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script> 
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
+
+    <!--script for this page-->
+    
+  
+  </body>
+</html>

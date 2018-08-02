@@ -7,7 +7,8 @@ function getBasicInfo() {
     
     //To get current leaves status
    // var URL = 'http://10.1.3.186:8083/getLeavesTaken/' + jsonEmpDetails.emp_id.toString();
-    var URL = 'http://10.1.3.186:8083/getLeavesTaken/' + '1376003';
+    // var URL = 'http://10.1.3.186:8083/getLeavesTaken/' + '1376003';
+    var URL = 'http://localhost:8083/getLeavesTaken/' + jsonEmpDetails.emp_id.toString();
 
     var baseURL= URL;
     console.log(baseURL);
@@ -68,8 +69,9 @@ function leaveAppCall(){
         approved_by:"00",
         status:"pending"
     }
+    //    var baseURL='http://10.1.3.186:8083/leaveForm'
 
-    var baseURL='http://10.1.3.186:8083/leaveForm'
+    var baseURL='http://localhost:8083/leaveForm'
     console.log('leaveAppObj',leaveAppObj);
    
     var xhttp = new XMLHttpRequest();
@@ -80,12 +82,13 @@ function leaveAppCall(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
              
-            if( this.responseText.status==='saved'){
+            if( this.responseText==='LEAVE FORM ADDED IN THE DATABASE'){
                 console.log('local get ==>', this.responseText)
-                window.open('Home.html');
+                window.alert('Leave Applications successfully submitted.');
             }
             else {
                 console.log('local get ==>', this.responseText);
+                window.alert('Error.');
             }
         }
     };
