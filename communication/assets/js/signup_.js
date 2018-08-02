@@ -5,11 +5,11 @@ function signupCall(){
     var doj_form = document.getElementById("doj").value; 
     var manager_name_form  = document.getElementById("managername").value;
     var manager_id_form = document.getElementById("managerid").value;
+    var password_form = document.getElementById("pass").value;
     var dept_name_form  = document.getElementById("dept").value;
     var emp_mail_form  = document.getElementById("emailid").value;
-   // var password_form = document.getElementById("password").value;
     var designation_form  = document.getElementById("design").value;
-    var password_form = "1234";
+    //var password_form = "1234";
     
 /*
     var emp_name_form = "Sanskar" ;
